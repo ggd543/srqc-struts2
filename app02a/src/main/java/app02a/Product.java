@@ -1,6 +1,7 @@
 package app02a;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class Product implements Serializable {
     private String productName;
@@ -8,6 +9,26 @@ public class Product implements Serializable {
     private String description;
 
     private String price;
+
+    private String comment;
+
+    private List<String> props;
+
+    public List<String> getProps() {
+        return props;
+    }
+
+    public void setProps(List<String> props) {
+        this.props = props;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
 
     public String getProductName() {
         return productName;
@@ -34,6 +55,10 @@ public class Product implements Serializable {
     }
 
     public String execute() {
+        System.out.println(getComment());
+        for (String s : getProps()) {
+            System.out.println(s);
+        }
         return "success";
     }
 }
