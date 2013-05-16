@@ -6,6 +6,7 @@
 <struts>
     <constant name="struts.enable.DynamicMethodInvocation" value="false" />
     <constant name="struts.devMode" value="true" />
+
     <package name="app03a" extends="struts-default">
 
         <default-action-ref name="CatchAll"/>
@@ -26,30 +27,31 @@
             <result name="input">/jsp/ProductForm.jsp</result>
         </action>
 
-
         <action name="User_input">
             <result>
                 <param name="location">/jsp/Login.jsp</param>
             </result>
         </action>
+
         <action name="User_login" class="app03a.User" method="login">
             <result name="success">/jsp/Menu.jsp</result>
             <result name="input">/jsp/Login.jsp</result>
         </action>
+
         <action name="User_logout" class="app03a.User" method="logout">
             <result name="success">/jsp/Login.jsp</result>
         </action>
-        
         
         <action name="CatchAll">
         	<result type="httpheader">
         	    <param name="status">404</param>
         	</result>
         </action>
+
         <action name="RedirectTest" class="app03a.TestUser">
             <result type="redirect-action">
                 <param name="actionName">User_input</param>
-            </result>    
+            </result>
         </action>
 
     </package>

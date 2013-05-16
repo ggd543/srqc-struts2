@@ -18,9 +18,10 @@ public class TestUser extends ActionSupport {
     public void setUserName(String userName) {
         this.userName = userName;
     }
+
     public String execute() {
         String s = "ab";
-        Integer.parseInt(s);
+        Integer.parseInt(s); // 这里会抛出异常
         return SUCCESS;
     }
 }

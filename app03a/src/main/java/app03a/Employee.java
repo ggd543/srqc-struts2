@@ -8,6 +8,7 @@ public class Employee {
     private String lastName;
     private Date birthDate;
     private Collection emails;
+
     public Date getBirthDate() {
         return birthDate;
     }
