@@ -1,6 +1,7 @@
 package app01b;
 
 import java.io.IOException;
+
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -22,8 +23,8 @@ public class FilterDispatcher implements Filter {
         this.filterConfig = null;
     }
 
-    public void doFilter(ServletRequest request, 
-            ServletResponse response, FilterChain filterChain) 
+    public void doFilter(ServletRequest request,
+                         ServletResponse response, FilterChain filterChain)
             throws IOException, ServletException {
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse res = (HttpServletResponse) response;
@@ -39,7 +40,7 @@ public class FilterDispatcher implements Filter {
         if (uri.endsWith(".action")) {
             // action processing
             int lastIndex = uri.lastIndexOf("/");
-            String action = uri.substring(lastIndex + 1); 
+            String action = uri.substring(lastIndex + 1);
             if (action.equals("Product_input.action")) {
                 // do nothing
             } else if (action.equals("Product_save.action")) {
@@ -63,8 +64,7 @@ public class FilterDispatcher implements Filter {
                 dispatchUrl = "/jsp/ProductDetails.jsp";
             }
             if (dispatchUrl != null) {
-                RequestDispatcher rd = request
-                        .getRequestDispatcher(dispatchUrl);
+                RequestDispatcher rd = request.getRequestDispatcher(dispatchUrl);
                 rd.forward(request, response);
             }
         } else if (uri.indexOf("/css/") != -1
