@@ -9,9 +9,9 @@
     <constant name="struts.devMode" value="true"/>
     <package name="app02a" namespace="" extends="struts-default">
         <action name="Product_input">
-            <param name="comment">no comment</param>
-            <param name="props">a,b,c</param>
-            <result>/jsp/Product.jsp</result>
+            <result>
+                <param name="location">/jsp/Product.jsp</param>
+            </result>
         </action>
         <action name="Product_save" class="app02a.Product" method="execute">
             <result>/jsp/Details.jsp</result>
