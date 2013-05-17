@@ -1,6 +1,7 @@
 package app03a;
 
 import java.util.Map;
+
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -26,6 +27,7 @@ public class User implements SessionAware, ServletRequestAware, ServletResponseA
 
     public void setPassword(String password) {
         this.password = password;
+        System.out.println("set password: "+password);
     }
 
     public String getUserName() {
@@ -54,12 +56,16 @@ public class User implements SessionAware, ServletRequestAware, ServletResponseA
 
     public String login() {
         String referrer = servletRequest.getHeader("referer");
-        System.out.println(referrer);
+        System.out.println("referer: " + referrer);
         if (referrer != null && userName.length() > 0 && password.length() > 0) {
-            int onlineUserCount = 0;
+            Integer onlineUserCount = 0;
             synchronized (servletContext) {
                 try {
                     onlineUserCount = (Integer) servletContext.getAttribute("onlineUserCount");
+                    if (onlineUserCount == null) {
+                        servletContext.setAttribute("onlineUserCount", 0);
+                        onlineUserCount = 0;
+                    }
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
