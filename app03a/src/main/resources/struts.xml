@@ -4,7 +4,7 @@
         "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
     <constant name="struts.devMode" value="true"/>
 
     <package name="app03a" extends="struts-default">
@@ -108,13 +108,12 @@
         </action>
     </package>
     -->
-    <!--
+
     <package name="wildcardMappingTest" namespace="/wild" extends="struts-default">
         <action name="*_*" class="app03a.{1}" method="{2}">
             <result>/jsp/{1}.jsp</result>
         </action>
     </package>
-    -->
 
     <package name="dynamicMethodInvocation" namespace="/dmi" extends="struts-default">
         <action name="Book" class="app03a.Book">
