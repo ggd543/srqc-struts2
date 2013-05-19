@@ -4,13 +4,15 @@ import java.lang.reflect.Member;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.Map;
+
 import ognl.TypeConverter;
-import com.opensymphony.xwork2.util.TypeConversionException;
+
+import com.opensymphony.xwork2.conversion.TypeConversionException;
 
 public class MyCurrencyConverter implements TypeConverter {
-    public Object convertValue(Map context, Object target, 
-            Member member, String propertyName, Object value, 
-            Class toType) {
+    public Object convertValue(Map context, Object target,
+                               Member member, String propertyName, Object value,
+                               Class toType) {
         System.out.println("target:" + target);
         System.out.println("member:" + member);
         System.out.println("property name:" + propertyName);
@@ -26,8 +28,7 @@ public class MyCurrencyConverter implements TypeConverter {
                 // String doubleValue = s[0].replaceAll("[,]", "");
                 // but regular expressions are comparatively 
                 // much slower
-                return Double.parseDouble(
-                        replaceString(doubleValue, ',', ""));
+                return Double.parseDouble(replaceString(doubleValue, ',', ""));
             } catch (NumberFormatException e) {
                 System.out.println("Error:" + e);
                 throw new TypeConversionException("Wrong");
@@ -36,7 +37,7 @@ public class MyCurrencyConverter implements TypeConverter {
         return null;
     }
 
-    
+
     public static String replaceString(String s, char c, String with) {
         if (s == null) {
             return null;

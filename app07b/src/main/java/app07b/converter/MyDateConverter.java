@@ -6,19 +6,21 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
 import javax.servlet.ServletContext;
+
 import org.apache.struts2.StrutsStatics;
 import ognl.DefaultTypeConverter;
-import com.opensymphony.xwork2.util.TypeConversionException;
+
+import com.opensymphony.xwork2.conversion.TypeConversionException;
 
 
 public class MyDateConverter extends DefaultTypeConverter {
 
     public Object convertValue(Map context, Object value, Class toType) {
         if (toType == Date.class) {
-            ServletContext servletContext = (ServletContext) 
+            ServletContext servletContext = (ServletContext)
                     context.get(StrutsStatics.SERVLET_CONTEXT);
-            System.out.println("servletContext == null ?" + servletContext==null);        
-            System.out.println("servletContext getClass:"+servletContext.getClass());
+            System.out.println("servletContext == null ?" + servletContext == null);
+            System.out.println("servletContext getClass:" + servletContext.getClass());
             String datePattern = servletContext.getInitParameter("datePattern");
             System.out.println("date pattern:" + datePattern);
 
