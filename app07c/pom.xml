@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>srqc.struts</groupId>
-    <artifactId>app07b</artifactId>
+    <artifactId>app07c</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
 
@@ -28,7 +28,7 @@
     </dependencies>
 	
     <build>
-        <finalName>app07b</finalName>
+        <finalName>app07c</finalName>
         <plugins>
             <plugin>
                 <groupId>org.mortbay.jetty</groupId>
