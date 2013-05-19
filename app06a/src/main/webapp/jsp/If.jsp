@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>if Tag Example</title>
-<style type="text/css">@import url(css/main.css);</style>
+<style type="text/css">@import url(/css/main.css);</style>
 </head>
 <body>
 <div id="global" style="width:350px">

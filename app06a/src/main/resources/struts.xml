@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC
-    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
-    "http://struts.apache.org/dtds/struts-2.0.dtd">
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
 
-    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
-    <constant name="struts.devMode" value="true" />
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+    <constant name="struts.devMode" value="true"/>
 
     <package name="app06a" extends="struts-default">
-        <action name="A" class="app06a.ATestAction">
-            <result>/jsp/A.jsp</result>
-        </action>
+        <!--<action name="A" class="app06a.ATestAction">-->
+            <!--<result>/jsp/A.jsp</result>-->
+        <!--</action>-->
         <action name="Action" class="app06a.ActionTestAction">
             <result>/jsp/Action.jsp</result>
         </action>
@@ -30,18 +30,18 @@
         <action name="If" class="app06a.IfTestAction">
             <result>/jsp/If.jsp</result>
         </action>
-        <action name="Include" class="app06a.IncludeTestAction">
-            <result>/jsp/Include.jsp</result>
-        </action>
-        <action name="Iterator" class="app06a.IteratorTestAction">
-            <result>/jsp/Iterator.jsp</result>
-        </action>
+        <!--<action name="Include" class="app06a.IncludeTestAction">-->
+            <!--<result>/jsp/Include.jsp</result>-->
+        <!--</action>-->
+        <!--<action name="Iterator" class="app06a.IteratorTestAction">-->
+            <!--<result>/jsp/Iterator.jsp</result>-->
+        <!--</action>-->
         <action name="Merge" class="app06a.MergeTestAction">
             <result>/jsp/Merge.jsp</result>
         </action>
-        <action name="Param" class="app06a.ParamTestAction">
-            <result>/jsp/Param.jsp</result>
-        </action>
+        <!--<action name="Param" class="app06a.ParamTestAction">-->
+            <!--<result>/jsp/Param.jsp</result>-->
+        <!--</action>-->
         <action name="Property" class="app06a.PropertyTestAction">
             <result>/jsp/Property.jsp</result>
         </action>
@@ -57,8 +57,11 @@
         <action name="Subset" class="app06a.SubsetTestAction">
             <result>/jsp/Subset.jsp</result>
         </action>
-        <action name="Url" class="app06a.UrlTestAction">
-            <result>/jsp/Url.jsp</result>
+        <!--<action name="Url" class="app06a.UrlTestAction">-->
+            <!--<result>/jsp/Url.jsp</result>-->
+        <!--</action>-->
+        <action name="doAction" class="app06a.ATestAction" method="doAction">
+            <result>/jsp/doAction.jsp</result>
         </action>
     </package>
 
