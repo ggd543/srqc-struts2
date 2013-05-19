@@ -10,7 +10,7 @@ import ognl.DefaultTypeConverter;
 
 import org.apache.struts2.util.StrutsTypeConverter;
 
-import com.opensymphony.xwork2.util.TypeConversionException;
+import com.opensymphony.xwork2.conversion.TypeConversionException;
 import com.opensymphony.xwork2.util.ValueStack;
 
 
