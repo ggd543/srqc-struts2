@@ -33,9 +33,9 @@
         <!--<action name="Include" class="app06a.IncludeTestAction">-->
             <!--<result>/jsp/Include.jsp</result>-->
         <!--</action>-->
-        <!--<action name="Iterator" class="app06a.IteratorTestAction">-->
-            <!--<result>/jsp/Iterator.jsp</result>-->
-        <!--</action>-->
+        <action name="Iterator" class="app06a.IteratorTestAction">
+            <result>/jsp/Iterator.jsp</result>
+        </action>
         <action name="Merge" class="app06a.MergeTestAction">
             <result>/jsp/Merge.jsp</result>
         </action>
