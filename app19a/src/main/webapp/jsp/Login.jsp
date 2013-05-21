@@ -1,8 +1,8 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 <head>
-<title>Login with CAPTCHA</title>
-<style type="text/css">@import url(css/main.css);</style>
+    <title>Login with CAPTCHA</title>
+    <style type="text/css">@import url(/css/main.css);</style>
 </head>
 <body>
 <div id="global">
