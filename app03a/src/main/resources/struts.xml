@@ -22,7 +22,7 @@
             <result name="login">/jsp/Login.jsp</result>
         </action>
 
-        <action name="Product_save" class="app03a.Product">
+        <action name="Product_save" class="Product-Action">
             <result type="dispatcher">/jsp/ProductDetails.jsp</result>
             <result name="input">/jsp/ProductForm.jsp</result>
         </action>

@@ -16,6 +16,6 @@ public class Chain1Action2 extends ActionSupport {
     @Override
     public String execute() throws Exception {
         System.out.println("Chain1 action2 execute");
-        return Action.SUCCESS;
+               return Action.SUCCESS;
     }
 }
